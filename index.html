@@ -345,6 +345,565 @@ section{
   line-height:1.75;
 }
 
+
+/* =========================================================
+   AJUSTES EXCLUSIVOS PARA CELULAR
+   Não alteram a versão desktop.
+   ========================================================= */
+@media (max-width: 700px){
+
+  body{
+    font-size:14.5px;
+  }
+
+  .container{
+    width:min(calc(100% - 28px), var(--largura));
+  }
+
+  /* TOPO: mais simples no celular */
+  header{
+    position:sticky;
+    top:0;
+  }
+
+  .header-inner{
+    min-height:60px;
+    padding:9px 0 !important;
+    display:flex;
+    flex-direction:row !important;
+    align-items:center !important;
+  }
+
+  .logo-nome{
+    font-size:1.28rem;
+  }
+
+  .logo-sub{
+    margin-top:4px;
+    font-size:.58rem;
+  }
+
+  nav{
+    display:none !important;
+  }
+
+  /* HERO: menos texto e menos altura */
+  #inicio{
+    padding-top:22px !important;
+    padding-bottom:28px !important;
+  }
+
+  .hero{
+    padding-top:0 !important;
+    padding-bottom:0 !important;
+  }
+
+  .hero h1{
+    font-size:2.12rem !important;
+    line-height:1.05;
+    margin-bottom:13px;
+  }
+
+  .hero h1 em{
+    margin-top:4px;
+  }
+
+  .hero-texto-principal{
+    font-size:1rem !important;
+    line-height:1.5;
+    margin-bottom:18px !important;
+  }
+
+  .hero-acoes{
+    gap:0;
+  }
+
+  .hero-acoes .botao-principal{
+    width:100%;
+    max-width:310px;
+  }
+
+  .hero-acoes .botao-secundario{
+    display:none;
+  }
+
+  /* Ritmo geral da página */
+  section{
+    padding-top:31px !important;
+    padding-bottom:31px !important;
+  }
+
+  h2{
+    font-size:2rem !important;
+    line-height:1.06;
+  }
+
+  h3{
+    font-size:1.18rem !important;
+  }
+
+  .section-tag{
+    font-size:.65rem;
+    margin-bottom:6px;
+  }
+
+  /* QUESTÕES DE PSICOTERAPIA:
+     título -> foto -> cards */
+  .trabalho-cabecalho{
+    margin-bottom:16px;
+  }
+
+  .trabalho-layout{
+    display:flex !important;
+    flex-direction:column;
+    gap:17px;
+  }
+
+  .trabalho-foto{
+    order:1 !important;
+    position:static !important;
+  }
+
+  .trabalho-layout .cards{
+    order:2 !important;
+    grid-template-columns:1fr !important;
+    gap:10px !important;
+  }
+
+  .trabalho-foto img{
+    width:100% !important;
+    max-width:100% !important;
+    height:290px !important;
+    max-height:none !important;
+    margin:0 !important;
+    object-fit:cover;
+    object-position:center 31%;
+    border-radius:20px;
+  }
+
+  .trabalho-layout .card{
+    padding:15px 16px !important;
+    border-radius:16px;
+  }
+
+  .trabalho-layout .card::before{
+    margin-bottom:10px;
+  }
+
+  .trabalho-layout .card h3{
+    font-size:1.08rem !important;
+    margin-bottom:6px;
+  }
+
+  .trabalho-layout .card p{
+    font-size:.84rem;
+    line-height:1.48;
+  }
+
+  /* SOBRE MIM:
+     texto vem antes da segunda foto para evitar duas fotos seguidas */
+  .sobre-grid{
+    display:flex !important;
+    flex-direction:column;
+    gap:18px !important;
+  }
+
+  .sobre-texto{
+    order:1;
+  }
+
+  .sobre-foto{
+    order:2;
+  }
+
+  .sobre-foto img{
+    width:100% !important;
+    max-width:100% !important;
+    height:355px !important;
+    min-height:0 !important;
+    max-height:none !important;
+    object-fit:cover !important;
+    object-position:center 18% !important;
+    border-radius:20px !important;
+  }
+
+  .sobre-texto p{
+    font-size:.94rem;
+    line-height:1.62 !important;
+    margin-bottom:11px !important;
+  }
+
+  /* Abordagem e primeira sessão sem comportamento sticky no celular */
+  .abordagem-titulo,
+  .primeira-titulo{
+    position:static !important;
+  }
+
+  .abordagem-grid,
+  .primeira-grid{
+    gap:20px !important;
+  }
+
+  .abordagem-conteudo p{
+    font-size:.94rem;
+    line-height:1.65;
+  }
+
+  .destaque-abordagem{
+    font-size:.91rem;
+    padding:14px 16px;
+  }
+
+  /* Cards da Terapia do Esquema mais enxutos */
+  .diferenciais-intro{
+    margin-bottom:22px;
+    font-size:.94rem;
+    line-height:1.62;
+  }
+
+  .diferenciais-grid{
+    gap:11px;
+  }
+
+  .diferencial-card{
+    padding:19px 18px;
+    border-radius:18px;
+  }
+
+  .card-icon{
+    width:42px;
+    height:42px;
+    margin-bottom:14px;
+    font-size:1.05rem;
+  }
+
+  .diferencial-card h3{
+    min-height:auto;
+    font-size:1.08rem !important;
+  }
+
+  .diferencial-card p{
+    font-size:.84rem;
+    line-height:1.5;
+  }
+
+  /* Primeira sessão */
+  .primeira-box{
+    padding:24px 20px !important;
+    border-radius:20px;
+  }
+
+  .primeira-chamada{
+    font-size:1.08rem !important;
+  }
+
+  /* Atendimento */
+  .atendimento-grid{
+    grid-template-columns:1fr 1fr !important;
+    gap:10px;
+    margin-top:18px;
+  }
+
+  .atendimento-item{
+    padding:18px 14px;
+  }
+
+  .atendimento-item strong{
+    font-size:1.25rem;
+  }
+
+  .atendimento-item span{
+    font-size:.78rem;
+  }
+
+  /* FAQ e contato */
+  details{
+    padding:17px 0;
+  }
+
+  .contato p{
+    margin-bottom:22px;
+  }
+
+  footer{
+    padding:28px 14px;
+  }
+
+  /* Botão flutuante um pouco menor */
+  .whatsapp-fixo{
+    right:12px;
+    bottom:12px;
+    padding:11px 15px;
+    font-size:.76rem;
+  }
+}
+
+
+/* =========================================================
+   CAPA FINAL
+   ========================================================= */
+
+.hero-final{
+  display:grid;
+  grid-template-columns:minmax(320px,.82fr) minmax(440px,1.18fr);
+  gap:72px;
+  align-items:center;
+  padding-top:34px;
+  padding-bottom:46px;
+}
+
+.hero-perfil{
+  max-width:405px;
+}
+
+.hero-perfil-foto{
+  width:100%;
+  height:445px;
+  display:block;
+  object-fit:cover;
+  object-position:center 14%;
+  border-radius:28px 110px 28px 28px;
+  box-shadow:var(--sombra);
+}
+
+.hero-identidade{
+  padding-top:15px;
+  color:var(--marrom-escuro);
+  font-size:.82rem;
+  line-height:1.55;
+}
+
+.hero-identidade strong{
+  display:block;
+  font-weight:600;
+}
+
+.hero-nome{
+  margin-bottom:4px;
+  font-family:'Cormorant Garamond',serif;
+  font-size:1.62rem;
+  line-height:1.05;
+}
+
+.hero-mensagem{
+  max-width:650px;
+}
+
+.hero-mensagem h1{
+  max-width:650px;
+  margin:0 0 22px;
+  font-size:clamp(3.5rem,5.8vw,5.3rem) !important;
+  line-height:.94;
+  text-align:left;
+}
+
+.hero-subtitulo{
+  max-width:580px;
+  margin:0 0 29px;
+  font-family:'Cormorant Garamond',serif;
+  font-size:1.48rem;
+  line-height:1.42;
+  font-style:italic;
+  color:var(--marrom);
+}
+
+.hero-whatsapp{
+  margin:0;
+}
+
+/* No desktop, mantém o restante do site como já estava */
+@media (max-width:900px){
+  .hero-final{
+    grid-template-columns:1fr 1fr;
+    gap:36px;
+  }
+
+  .hero-perfil-foto{
+    height:400px;
+  }
+
+  .hero-mensagem h1{
+    font-size:3.35rem !important;
+  }
+}
+
+/* CAPA NO CELULAR */
+@media (max-width:700px){
+  #inicio{
+    padding-top:20px !important;
+    padding-bottom:30px !important;
+  }
+
+  .hero-final{
+    display:flex;
+    flex-direction:column;
+    gap:24px;
+    padding-top:0;
+    padding-bottom:0;
+  }
+
+  .hero-perfil{
+    width:100%;
+    max-width:360px;
+    margin:auto;
+  }
+
+  .hero-perfil-foto{
+    height:350px;
+    border-radius:22px 70px 22px 22px;
+    object-position:center 13%;
+  }
+
+  .hero-identidade{
+    padding-top:12px;
+    text-align:left;
+    font-size:.76rem;
+    line-height:1.5;
+  }
+
+  .hero-nome{
+    font-size:1.45rem;
+  }
+
+  .hero-mensagem{
+    width:100%;
+    text-align:center;
+  }
+
+  .hero-mensagem h1{
+    max-width:390px;
+    margin:0 auto 13px;
+    font-size:2.5rem !important;
+    line-height:.98;
+    text-align:center;
+  }
+
+  .hero-subtitulo{
+    max-width:360px;
+    margin:0 auto 20px;
+    font-size:1.12rem;
+    line-height:1.42;
+  }
+
+  .hero-whatsapp{
+    width:min(100%,310px);
+  }
+}
+
+
+/* =========================================================
+   AJUSTES FINAIS DE ALINHAMENTO
+   ========================================================= */
+
+.hero-perfil{
+  width:100%;
+  max-width:405px;
+}
+
+.hero-identidade{
+  width:100%;
+  max-width:405px;
+  padding:15px 4px 0;
+  text-align:center;
+}
+
+.hero-mensagem{
+  max-width:680px;
+  text-align:center;
+  justify-self:center;
+}
+
+.hero-mensagem h1{
+  max-width:680px;
+  margin:0 auto 22px !important;
+  text-align:center !important;
+}
+
+.hero-subtitulo{
+  max-width:590px;
+  margin:0 auto 29px !important;
+  text-align:center;
+}
+
+.hero-whatsapp{
+  margin-left:auto !important;
+  margin-right:auto !important;
+}
+
+@media (max-width:700px){
+  .hero-identidade{
+    max-width:360px;
+    text-align:center !important;
+  }
+
+  .hero-mensagem,
+  .hero-mensagem h1,
+  .hero-subtitulo{
+    text-align:center !important;
+  }
+}
+
+
+/* =========================================================
+   AJUSTE FINAL DA SEÇÃO 2
+   Foto alinhada à altura do título no desktop
+   ========================================================= */
+
+#trabalho .trabalho-layout{
+  display:grid;
+  grid-template-columns:minmax(0,1.7fr) minmax(280px,.7fr);
+  gap:26px;
+  align-items:start;
+}
+
+#trabalho .trabalho-conteudo{
+  min-width:0;
+}
+
+#trabalho .trabalho-cabecalho{
+  margin-bottom:18px;
+}
+
+#trabalho .trabalho-foto{
+  position:sticky;
+  top:100px;
+  align-self:start;
+  margin-top:0 !important;
+}
+
+#trabalho .trabalho-foto img{
+  margin-top:0 !important;
+}
+
+/* No celular mantém a ordem visual:
+   título -> foto -> cards */
+@media(max-width:900px){
+  #trabalho .trabalho-layout{
+    display:flex !important;
+    flex-direction:column;
+    gap:17px;
+  }
+
+  #trabalho .trabalho-conteudo{
+    display:contents;
+  }
+
+  #trabalho .trabalho-cabecalho{
+    order:1;
+    margin-bottom:0;
+  }
+
+  #trabalho .trabalho-foto{
+    order:2 !important;
+    position:static !important;
+    margin-top:0 !important;
+  }
+
+  #trabalho .cards{
+    order:3 !important;
+  }
+}
+
 </style>
 </head>
 
@@ -372,41 +931,43 @@ section{
 <main>
 
 <section id="inicio">
-  <div class="container hero">
-    <div class="hero-conteudo">
+  <div class="container hero-final">
 
-      <h1>
-        Psicoterapia para mulheres que vivem as transformações da maternidade
-        <em>— das tentativas ao resgate da identidade.</em>
-      </h1>
+    <div class="hero-perfil">
+      <img src="foto-capa.jpg" alt="Psicóloga Kilma Frateles" class="hero-perfil-foto">
 
-      <p class="hero-texto-principal">
-        Um espaço de psicoterapia construído com cuidado, escuta e compreensão da sua história.
+      <div class="hero-identidade">
+        <strong class="hero-nome">Kilma Frateles</strong>
+        <strong>Psicóloga • Especialista em Saúde Mental Perinatal</strong>
+        <strong>CRP 03/25686</strong>
+      </div>
+    </div>
+
+    <div class="hero-mensagem">
+      <h1>Psicoterapia para mulheres</h1>
+
+      <p class="hero-subtitulo">
+        Cuidado psicológico para mulheres, com atenção especial à saúde mental na maternidade.
       </p>
 
-      <div class="hero-acoes">
-        <a href="https://wa.me/5565993419085" class="botao botao-principal">
-          Agendar pelo WhatsApp
-        </a>
-
-        <a href="#primeira-sessao" class="botao botao-secundario">
-          Como funciona a primeira sessão
-        </a>
-      </div>
-
+      <a href="https://wa.me/5565993419085?text=Ol%C3%A1%2C%20Kilma%21%20Conheci%20seu%20trabalho%20pelo%20site%20e%20gostaria%20de%20saber%20mais%20sobre%20a%20psicoterapia." class="botao botao-principal hero-whatsapp">
+        Agendar pelo WhatsApp
+      </a>
     </div>
+
   </div>
 </section>
 
 <section id="trabalho">
-<div class="container">
-  <div class="trabalho-cabecalho">
+  <div class="container">
+    <div class="trabalho-layout">
+
+      <div class="trabalho-conteudo">
+        <div class="trabalho-cabecalho">
     <span class="section-tag">Psicoterapia para mulheres</span>
     <h2>Algumas questões que podemos trabalhar na psicoterapia</h2>
   </div>
-
-  <div class="trabalho-layout">
-    <div class="cards">
+        <div class="cards">
 <article class="card">
   <h3>Decisão, tentativas e gestação</h3>
   <p>Dúvidas sobre ser ou não ser mãe, tentativas de engravidar, perdas, medos e transformações emocionais da gestação.</p>
@@ -427,10 +988,14 @@ section{
   <p>Preocupação excessiva, perfeccionismo, culpa, medo de rejeição, dificuldade de estabelecer limites e conflitos afetivos.</p>
 </article>
 </div>
-    <div class="trabalho-foto">
+      </div>
+
+      <div class="trabalho-foto">
 <img src="foto-psicoterapia.jpg" alt="Kilma Frateles em atendimento e escrita clínica">
 </div>
-</div>
+
+    </div>
+  </div>
 </section>
 
 <section id="sobre">
@@ -492,40 +1057,6 @@ section{
 
 </section>
 
-<section id="abordagem">
-<div class="container abordagem-grid">
-
-<div class="abordagem-titulo">
-<span class="section-tag">Terapia do Esquema</span>
-<h2>Como minha abordagem funciona?</h2>
-</div>
-
-<div class="abordagem-conteudo">
-<p>
-Trabalho com a <strong>Terapia do Esquema</strong>, uma abordagem que parte da ideia de que muitas dificuldades emocionais estão ligadas a experiências importantes da nossa história e a necessidades que, em algum momento, não puderam ser suficientemente atendidas.
-</p>
-
-<p>
-Na psicoterapia, não olhamos apenas para o que você pensa sobre uma situação, mas também para <strong>o que sente, do que precisa e quais partes de você costumam assumir o controle em momentos de medo, culpa, cobrança, rejeição ou vulnerabilidade.</strong>
-</p>
-
-<p>
-A relação terapêutica também é uma parte importante desse trabalho. Por meio da <strong>reparentalização limitada</strong>, da confrontação empática e de técnicas experienciais, podemos trabalhar essas experiências de forma mais profunda, não apenas compreendê-las racionalmente.
-</p>
-
-<p>
-Ao longo do processo, buscamos fortalecer o chamado <strong>Adulto Saudável</strong>: a parte de você capaz de reconhecer suas necessidades, proteger seus limites, regular emoções e se posicionar de forma mais coerente com a vida que deseja construir.
-</p>
-
-<div class="destaque-abordagem">
-A psicoterapia não acontece apenas no entendimento racional daquilo que você vive. Algumas experiências precisam também ser acessadas, sentidas e trabalhadas emocionalmente.
-</div>
-</div>
-
-</div>
-</section>
-
-
 <section id="diferenciais">
   <div class="container">
     <span class="section-tag">Terapia do Esquema</span>
@@ -581,6 +1112,52 @@ A psicoterapia não acontece apenas no entendimento racional daquilo que você v
   </div>
 </section>
 
+<section id="abordagem">
+  <div class="container abordagem-grid">
+
+    <div class="abordagem-titulo">
+      <span class="section-tag">Terapia do Esquema</span>
+      <h2>Como minha abordagem funciona?</h2>
+    </div>
+
+    <div class="abordagem-conteudo">
+
+      <p>
+        A <strong>Terapia do Esquema</strong> ajuda a compreender padrões emocionais
+        construídos ao longo da nossa história e que ainda podem influenciar a forma
+        como nos relacionamos, fazemos escolhas e lidamos com nossas necessidades.
+      </p>
+
+      <p>
+        Na terapia, vamos além de entender racionalmente o que está acontecendo.
+        Olhamos para <strong>o que você sente, do que precisa e para os padrões que
+        costumam aparecer em momentos de medo, culpa, cobrança, rejeição ou
+        vulnerabilidade</strong>.
+      </p>
+
+      <p>
+        A relação terapêutica e os recursos da Terapia do Esquema permitem trabalhar
+        essas experiências de forma mais profunda, especialmente aquilo que nem sempre
+        muda apenas porque conseguimos compreender.
+      </p>
+
+      <p>
+        Ao longo do processo, buscamos fortalecer o <strong>Adulto Saudável</strong> —
+        a capacidade de reconhecer suas necessidades, cuidar de si, estabelecer limites,
+        regular emoções e fazer escolhas mais coerentes com quem você é e com a vida que
+        deseja construir.
+      </p>
+
+      <div class="destaque-abordagem">
+        Mais do que compreender por que você se sente assim, a terapia pode ajudar a
+        transformar a forma como você se relaciona consigo mesma e com a sua história.
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
 
 <section id="primeira-sessao">
 <div class="container primeira-grid">
@@ -593,7 +1170,7 @@ A psicoterapia não acontece apenas no entendimento racional daquilo que você v
 Você não precisa chegar sabendo exatamente o que dizer — e também não precisa contar tudo de uma vez.
 </p>
 
-<a href="https://wa.me/5565993419085" class="botao botao-principal">Quero saber sobre a primeira sessão</a>
+<a href="https://wa.me/5565993419085?text=Ol%C3%A1%2C%20Kilma%21%20Conheci%20seu%20trabalho%20pelo%20site%20e%20gostaria%20de%20saber%20mais%20sobre%20a%20psicoterapia." class="botao botao-principal">Quero saber sobre a primeira sessão</a>
 </div>
 
 <div class="primeira-box">
@@ -631,7 +1208,7 @@ Cada atendimento é realizado de forma personalizada, de acordo com as necessida
 </div>
 
 <div class="atendimento-cta">
-<a href="https://wa.me/5565993419085" class="botao botao-principal">Quero entender como funciona</a>
+<a href="https://wa.me/5565993419085?text=Ol%C3%A1%2C%20Kilma%21%20Conheci%20seu%20trabalho%20pelo%20site%20e%20gostaria%20de%20saber%20mais%20sobre%20a%20psicoterapia." class="botao botao-principal">Quero entender como funciona</a>
 </div>
 </div>
 </section>
@@ -673,7 +1250,7 @@ Cada atendimento é realizado de forma personalizada, de acordo com as necessida
 <span class="section-tag" style="color:#e9c9be">Primeiro contato</span>
 <h2>Está pensando em começar psicoterapia?</h2>
 <p>Você pode entrar em contato para saber mais sobre o atendimento, valores e horários disponíveis. Esse primeiro contato também é um espaço para esclarecer suas dúvidas sobre o processo.</p>
-<a href="https://wa.me/5565993419085" class="botao">Conversar pelo WhatsApp</a>
+<a href="https://wa.me/5565993419085?text=Ol%C3%A1%2C%20Kilma%21%20Conheci%20seu%20trabalho%20pelo%20site%20e%20gostaria%20de%20saber%20mais%20sobre%20a%20psicoterapia." class="botao">Conversar pelo WhatsApp</a>
 </div>
 </section>
 
@@ -683,13 +1260,13 @@ Cada atendimento é realizado de forma personalizada, de acordo com as necessida
 <div class="footer-links">
 <a href="https://www.instagram.com/psicologa.kilma/">Instagram</a>
 <a href="mailto:kilmafratele@gmail.com">E-mail</a>
-<a href="https://wa.me/5565993419085">WhatsApp</a>
+<a href="https://wa.me/5565993419085?text=Ol%C3%A1%2C%20Kilma%21%20Conheci%20seu%20trabalho%20pelo%20site%20e%20gostaria%20de%20saber%20mais%20sobre%20a%20psicoterapia.">WhatsApp</a>
 </div>
 <div>Psicóloga Kilma Frateles · CRP 03/25686</div>
 <div>© 2026 · Psicoterapia online para mulheres</div>
 </footer>
 
-<a href="https://wa.me/5565993419085" class="whatsapp-fixo">Falar no WhatsApp</a>
+<a href="https://wa.me/5565993419085?text=Ol%C3%A1%2C%20Kilma%21%20Conheci%20seu%20trabalho%20pelo%20site%20e%20gostaria%20de%20saber%20mais%20sobre%20a%20psicoterapia." class="whatsapp-fixo">Falar no WhatsApp</a>
 
 </body>
 </html>
