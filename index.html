@@ -2174,6 +2174,405 @@ section{
   }
 }
 
+
+/* =========================================================
+   V21 — REFINAMENTO MOBILE
+   Mantém o desktop e melhora ritmo, leitura e conversão no celular
+   ========================================================= */
+
+@media(max-width:760px){
+
+  html{
+    scroll-behavior:smooth;
+  }
+
+  body{
+    overflow-x:hidden;
+  }
+
+  .container{
+    width:100% !important;
+    max-width:none !important;
+    padding-left:18px !important;
+    padding-right:18px !important;
+  }
+
+  section{
+    padding-top:44px !important;
+    padding-bottom:44px !important;
+  }
+
+  /* Barra superior menor */
+  .header-inner-minimo{
+    min-height:40px !important;
+    padding-left:16px !important;
+    padding-right:16px !important;
+  }
+
+  .logo-minimo .logo-nome{
+    font-size:.92rem !important;
+    letter-spacing:.01em;
+  }
+
+  /* HERO: no celular a mensagem vem antes da foto */
+  #inicio{
+    padding-top:26px !important;
+    padding-bottom:38px !important;
+  }
+
+  .hero-final{
+    display:flex !important;
+    flex-direction:column !important;
+    gap:24px !important;
+  }
+
+  .hero-mensagem{
+    order:1 !important;
+    width:100% !important;
+    text-align:center !important;
+  }
+
+  .hero-perfil{
+    order:2 !important;
+    width:100% !important;
+    max-width:330px !important;
+    margin:0 auto !important;
+  }
+
+  .hero-mensagem h1{
+    max-width:355px !important;
+    margin:0 auto 14px !important;
+    font-size:1.92rem !important;
+    line-height:1.04 !important;
+    letter-spacing:-.015em;
+  }
+
+  .hero-online{
+    margin:0 auto 16px !important;
+    font-size:.87rem !important;
+  }
+
+  .hero-whatsapp{
+    width:100% !important;
+    max-width:320px !important;
+    min-height:48px;
+    margin:0 auto !important;
+    display:flex !important;
+    align-items:center;
+    justify-content:center;
+  }
+
+  .hero-perfil-foto{
+    width:100% !important;
+    height:315px !important;
+    object-fit:cover !important;
+    object-position:center 14% !important;
+    border-radius:22px 58px 22px 22px !important;
+  }
+
+  .hero-identidade-enxuta{
+    padding-top:10px !important;
+    font-size:.69rem !important;
+    line-height:1.42 !important;
+  }
+
+  .hero-nome-completo{
+    font-size:.92rem !important;
+    margin-bottom:2px !important;
+  }
+
+  /* IDENTIFICAÇÃO */
+  #identificacao{
+    padding-top:40px !important;
+    padding-bottom:42px !important;
+  }
+
+  .identificacao-cabecalho-final{
+    margin-bottom:24px !important;
+  }
+
+  .identificacao-boas-vindas-topo{
+    margin-bottom:12px !important;
+    font-size:.92rem !important;
+  }
+
+  .identificacao-destaque{
+    max-width:350px !important;
+    font-size:1.48rem !important;
+    line-height:1.26 !important;
+    margin-bottom:9px !important;
+  }
+
+  .identificacao-subtexto{
+    max-width:340px !important;
+    font-size:1rem !important;
+    line-height:1.38 !important;
+  }
+
+  .identificacao-grid-quatro{
+    grid-template-columns:1fr !important;
+    gap:10px !important;
+  }
+
+  .identificacao-grid-quatro .identificacao-card{
+    padding:17px 16px !important;
+    border-radius:16px !important;
+  }
+
+  .identificacao-grid-quatro .identificacao-card h3{
+    margin-bottom:8px !important;
+    font-size:1.13rem !important;
+    line-height:1.18 !important;
+  }
+
+  .identificacao-grid-quatro .identificacao-card p{
+    font-size:.88rem !important;
+    line-height:1.52 !important;
+  }
+
+  .identificacao-cta{
+    margin-top:20px !important;
+  }
+
+  .identificacao-cta .botao{
+    width:100% !important;
+    max-width:320px !important;
+    min-height:48px;
+  }
+
+  /* SOBRE MIM: texto primeiro, foto depois */
+  .sobre-grid{
+    display:flex !important;
+    flex-direction:column !important;
+    gap:24px !important;
+  }
+
+  .sobre-texto{
+    order:1 !important;
+  }
+
+  .sobre-foto{
+    order:2 !important;
+  }
+
+  .sobre-foto img{
+    width:100% !important;
+    height:360px !important;
+    object-fit:cover !important;
+    object-position:center 17% !important;
+    border-radius:20px !important;
+  }
+
+  .sobre-texto h2,
+  #abordagem .abordagem-intro h2,
+  .primeira-conteudo-final h2{
+    font-size:1.82rem !important;
+    line-height:1.08 !important;
+  }
+
+  /* No celular, alinhamento à esquerda melhora muito a leitura.
+     O desktop continua justificado. */
+  .sobre-texto p,
+  .identificacao-card p,
+  .abordagem-intro p,
+  .abordagem-passo-card p,
+  .abordagem-objetivo-destaque p,
+  .primeira-conteudo p,
+  .atendimento-intro,
+  .contato-inner p{
+    text-align:left !important;
+    text-justify:auto !important;
+  }
+
+  .sobre-texto p,
+  .abordagem-intro p,
+  .primeira-conteudo p{
+    font-size:.92rem !important;
+    line-height:1.62 !important;
+  }
+
+  /* TERAPIA DO ESQUEMA */
+  .abordagem-intro{
+    margin-bottom:20px !important;
+  }
+
+  .abordagem-pratica{
+    padding:20px 16px !important;
+    border-radius:18px !important;
+  }
+
+  .abordagem-pratica h3{
+    font-size:1.48rem !important;
+    margin-bottom:8px !important;
+  }
+
+  .abordagem-card-intro{
+    font-size:.9rem !important;
+    line-height:1.52 !important;
+    margin-bottom:14px !important;
+    text-align:left !important;
+  }
+
+  .abordagem-passos-grid{
+    grid-template-columns:1fr !important;
+    gap:9px !important;
+    margin-top:14px !important;
+  }
+
+  .abordagem-passo-card{
+    padding:15px 14px !important;
+    border-radius:14px !important;
+  }
+
+  .abordagem-passo-card strong{
+    font-size:.89rem !important;
+    margin-bottom:5px !important;
+  }
+
+  .abordagem-passo-card p{
+    font-size:.85rem !important;
+    line-height:1.5 !important;
+  }
+
+  .abordagem-objetivo-destaque{
+    display:block !important;
+    margin-top:14px !important;
+    padding:19px 16px !important;
+    border-radius:18px !important;
+  }
+
+  .abordagem-objetivo-destaque .section-tag{
+    margin-bottom:4px !important;
+  }
+
+  .abordagem-objetivo-destaque h3{
+    margin-bottom:12px !important;
+    font-size:1.45rem !important;
+  }
+
+  .abordagem-objetivo-destaque p{
+    font-size:.88rem !important;
+    line-height:1.55 !important;
+  }
+
+  /* PRIMEIRA SESSÃO */
+  .primeira-grid-alinhada{
+    display:flex !important;
+    flex-direction:column !important;
+    gap:22px !important;
+  }
+
+  .primeira-conteudo-final{
+    order:1 !important;
+  }
+
+  .primeira-foto-alinhada{
+    order:2 !important;
+    margin-top:0 !important;
+  }
+
+  .primeira-destaque{
+    padding:14px 15px !important;
+    margin-top:16px !important;
+    font-size:1rem !important;
+    line-height:1.48 !important;
+    text-align:left !important;
+  }
+
+  .primeira-whatsapp{
+    width:100% !important;
+    max-width:320px !important;
+    min-height:48px;
+    margin-top:16px !important;
+  }
+
+  .primeira-foto-alinhada img{
+    width:100% !important;
+    height:330px !important;
+    object-fit:cover !important;
+    object-position:center 22% !important;
+    border-radius:20px !important;
+  }
+
+  /* ATENDIMENTO: 2x2 no celular */
+  .atendimento-grid-quatro{
+    grid-template-columns:repeat(2,minmax(0,1fr)) !important;
+    gap:10px !important;
+  }
+
+  .atendimento-item{
+    min-height:116px !important;
+    padding:16px 13px !important;
+    border-radius:15px !important;
+  }
+
+  .atendimento-item strong{
+    font-size:1rem !important;
+  }
+
+  .atendimento-item span{
+    font-size:.78rem !important;
+    line-height:1.4 !important;
+  }
+
+  .atendimento-observacao{
+    margin-top:12px !important;
+    font-size:.75rem !important;
+    line-height:1.45 !important;
+    text-align:left !important;
+  }
+
+  /* CTA FINAL */
+  .contato-inner{
+    text-align:center !important;
+  }
+
+  .contato-inner h2{
+    font-size:1.85rem !important;
+    line-height:1.08 !important;
+    max-width:350px;
+    margin-left:auto !important;
+    margin-right:auto !important;
+  }
+
+  .contato-inner p{
+    max-width:345px;
+    margin-left:auto !important;
+    margin-right:auto !important;
+    font-size:.9rem !important;
+    line-height:1.58 !important;
+    text-align:center !important;
+  }
+
+  .contato-inner .botao{
+    width:100% !important;
+    max-width:320px !important;
+    min-height:48px;
+  }
+
+  /* WhatsApp flutuante menor para não cobrir conteúdo */
+  .whatsapp-fixo{
+    right:14px !important;
+    bottom:14px !important;
+    padding:11px 14px !important;
+    font-size:.78rem !important;
+    border-radius:999px !important;
+    box-shadow:0 8px 22px rgba(0,0,0,.16) !important;
+  }
+
+  footer{
+    padding:26px 18px 78px !important;
+    font-size:.74rem !important;
+    line-height:1.6 !important;
+  }
+
+  .footer-links{
+    gap:14px !important;
+    flex-wrap:wrap !important;
+    justify-content:center !important;
+  }
+}
+
 </style>
 </head>
 
@@ -2193,7 +2592,7 @@ section{
   <div class="container hero-final">
 
     <div class="hero-perfil">
-      <img src="foto-capa.jpg" alt="Psicóloga Kilma Frateles" class="hero-perfil-foto">
+      <img src="foto-capa.jpg" alt="Psicóloga Kilma Frateles" class="hero-perfil-foto" loading="eager" fetchpriority="high" decoding="async">
 
       <div class="hero-identidade hero-identidade-enxuta">
         <strong class="hero-nome-completo">Katiane Kilma Fernandes Frateles</strong>
@@ -2283,6 +2682,8 @@ section{
       <img
         src="foto-sobre-mim.jpg"
         alt="Psicóloga Kilma Frateles"
+        loading="lazy"
+        decoding="async"
       >
     </div>
 
@@ -2433,7 +2834,7 @@ section{
     </div>
 
     <div class="primeira-foto primeira-foto-alinhada">
-      <img src="foto-psicoterapia.jpg" alt="Psicóloga Kilma Frateles">
+      <img src="foto-psicoterapia.jpg" alt="Psicóloga Kilma Frateles" loading="lazy" decoding="async">
     </div>
 
   </div>
