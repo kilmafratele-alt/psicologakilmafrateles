@@ -1948,26 +1948,243 @@ section{
   }
 }
 
+
+/* =========================================================
+   V13 — AJUSTES ESTRUTURAIS PARA CONVERSÃO
+   ========================================================= */
+
+/* TERAPIA DO ESQUEMA: leitura mais rápida */
+#abordagem .abordagem-intro{
+  max-width:900px;
+  margin:0 auto 30px;
+}
+
+.abordagem-pratica{
+  max-width:1080px;
+  margin:0 auto;
+  padding:28px 30px 30px;
+  background:rgba(255,255,255,.72);
+  border:1px solid rgba(107,70,59,.10);
+  border-radius:24px;
+}
+
+.abordagem-pratica h3{
+  margin:0 0 8px;
+  font-family:'Cormorant Garamond',serif;
+  font-size:2rem !important;
+  line-height:1.08;
+  color:var(--marrom-escuro);
+}
+
+.abordagem-passos-grid{
+  display:grid;
+  grid-template-columns:repeat(2,minmax(0,1fr));
+  gap:14px;
+  margin-top:18px;
+}
+
+.abordagem-passo-card{
+  padding:18px 18px 16px;
+  background:rgba(233,201,190,.28);
+  border-radius:16px;
+}
+
+.abordagem-passo-card strong{
+  display:block;
+  margin-bottom:7px;
+  font-size:.94rem;
+  line-height:1.35;
+  color:var(--marrom-escuro);
+}
+
+.abordagem-passo-card p{
+  margin:0 !important;
+  font-size:.88rem !important;
+  line-height:1.55 !important;
+  text-align:justify !important;
+}
+
+.abordagem-objetivo-destaque{
+  max-width:1080px;
+  margin:20px auto 0;
+  padding:26px 30px;
+  display:grid;
+  grid-template-columns:minmax(220px,.55fr) minmax(0,1.45fr);
+  gap:28px;
+  align-items:start;
+  background:var(--rose-claro);
+  border-radius:24px;
+}
+
+.abordagem-objetivo-destaque h3{
+  margin:4px 0 0;
+  font-family:'Cormorant Garamond',serif;
+  font-size:1.85rem !important;
+  line-height:1.1;
+  color:var(--marrom-escuro);
+}
+
+.abordagem-objetivo-destaque p{
+  margin:0 0 10px !important;
+  font-size:.94rem !important;
+  line-height:1.62 !important;
+  text-align:justify !important;
+}
+
+.abordagem-objetivo-destaque p:last-child{
+  margin-bottom:0 !important;
+}
+
+/* PRIMEIRA SESSÃO: fechamento autoral em destaque */
+.primeira-destaque{
+  margin-top:20px !important;
+  padding:16px 18px;
+  background:var(--rose-claro);
+  border-left:3px solid var(--marrom);
+  border-radius:0 14px 14px 0;
+  font-family:'Cormorant Garamond',serif;
+  font-size:1.12rem !important;
+  line-height:1.5 !important;
+  font-style:italic;
+}
+
+/* ATENDIMENTO: 4 blocos objetivos */
+.atendimento-grid-quatro{
+  grid-template-columns:repeat(4,minmax(0,1fr)) !important;
+  gap:14px;
+}
+
+/* RESPONSIVO */
+@media(max-width:900px){
+  .abordagem-passos-grid{
+    grid-template-columns:1fr 1fr;
+  }
+
+  .abordagem-objetivo-destaque{
+    grid-template-columns:1fr;
+    gap:12px;
+  }
+
+  .atendimento-grid-quatro{
+    grid-template-columns:repeat(2,minmax(0,1fr)) !important;
+  }
+}
+
+@media(max-width:700px){
+  .abordagem-pratica{
+    padding:22px 18px;
+    border-radius:18px;
+  }
+
+  .abordagem-pratica h3{
+    font-size:1.55rem !important;
+  }
+
+  .abordagem-passos-grid{
+    grid-template-columns:1fr;
+    gap:10px;
+  }
+
+  .abordagem-passo-card{
+    padding:16px 15px;
+  }
+
+  .abordagem-objetivo-destaque{
+    padding:21px 18px;
+    border-radius:18px;
+  }
+
+  .abordagem-objetivo-destaque h3{
+    font-size:1.5rem !important;
+  }
+
+  .primeira-destaque{
+    font-size:1.03rem !important;
+  }
+
+  .atendimento-grid-quatro{
+    grid-template-columns:repeat(2,minmax(0,1fr)) !important;
+  }
+}
+
+
+/* V15 — CABEÇALHO MÍNIMO */
+.header-minimo{
+  position:sticky;
+  top:0;
+  z-index:100;
+  background:rgba(251,247,244,.95);
+  backdrop-filter:blur(12px);
+  border-bottom:1px solid rgba(107,70,59,.07);
+}
+.header-inner-minimo{
+  min-height:46px !important;
+  display:flex !important;
+  align-items:center !important;
+  justify-content:flex-end !important;
+  padding-top:0 !important;
+  padding-bottom:0 !important;
+}
+.logo-minimo{
+  display:block !important;
+  margin-left:auto !important;
+  text-decoration:none;
+  line-height:1 !important;
+  text-align:right;
+}
+.logo-minimo .logo-nome{
+  font-family:'Cormorant Garamond',serif;
+  font-size:1.08rem !important;
+  font-weight:600;
+  color:var(--marrom-escuro);
+  white-space:nowrap;
+}
+.header-minimo nav,
+.header-minimo .logo-sub{
+  display:none !important;
+}
+@media(max-width:700px){
+  .header-inner-minimo{min-height:42px !important;}
+  .logo-minimo .logo-nome{font-size:.98rem !important;}
+}
+
+
+/* V16 — barra superior em tom nude suave */
+.header-minimo{
+  background: rgba(233, 201, 190, 0.92) !important;
+  border-bottom: 1px solid rgba(107, 70, 59, 0.08) !important;
+}
+
+
+/* V18 — observação sobre reembolso fora do card */
+.atendimento-observacao{
+  max-width:900px;
+  margin:16px auto 0;
+  font-size:.82rem;
+  line-height:1.5;
+  font-style:italic;
+  color:var(--marrom);
+  text-align:left !important;
+}
+
+@media(max-width:700px){
+  .atendimento-observacao{
+    font-size:.78rem;
+    margin-top:13px;
+  }
+}
+
 </style>
 </head>
 
 <body>
 
-<header>
-<div class="container header-inner">
-<a href="#inicio" class="logo">
-<span class="logo-nome">Psicóloga Kilma Frateles</span>
-<span class="logo-sub">Saúde Mental da Mulher</span>
-</a>
-<nav>
-    <a href="#identificacao">O que você pode estar vivendo</a>
-  <a href="#sobre">Sobre mim</a>
-  <a href="#abordagem">Terapia do Esquema</a>
-  <a href="#primeira-sessao">Primeira sessão</a>
-  <a href="#atendimento">Atendimento</a>
-  <a href="#contato">Contato</a>
-</nav>
-</div>
+<header class="header-minimo">
+  <div class="container header-inner header-inner-minimo">
+    <a href="#inicio" class="logo logo-minimo">
+      <span class="logo-nome">Psicóloga Kilma Frateles</span>
+    </a>
+  </div>
 </header>
 
 <main>
@@ -2128,53 +2345,53 @@ section{
         Ao longo da infância e da adolescência, desenvolvemos formas profundas de perceber a nós mesmas, os outros e o mundo. Na Terapia do Esquema, algumas dessas formas são chamadas de <strong>esquemas</strong> e estão relacionadas às experiências vividas e à maneira como nossas necessidades emocionais foram atendidas.
       </p>
 
-
-      <p>
-        A Terapia do Esquema ajuda a identificar esses esquemas e compreender como eles aparecem na sua vida. A partir disso, trabalhamos novas formas de responder às situações que os ativam.
-      </p>
     </div>
 
-    <div class="abordagem-cards-grandes">
+    <div class="abordagem-pratica">
+      <h3>Como trabalhamos na prática?</h3>
 
-      <article class="abordagem-card-grande">
-        <h3>Como trabalhamos na prática?</h3>
+      <p class="abordagem-card-intro">
+        Nas sessões, começamos a reconhecer o que costuma despertar determinadas emoções e reações.
+      </p>
 
-        <div class="abordagem-passos">
-
-          <div class="abordagem-passo">
-            <strong>1. Mapeamento e Autoconhecimento</strong>
-            <p>
-              Identificamos quais esquemas e gatilhos estão sendo ativados na sua rotina ou no seu desejo de ser mãe, buscando compreender de onde eles vêm.
-            </p>
-          </div>
-
-          <div class="abordagem-passo">
-            <strong>2. Reestruturação Cognitiva e Emocional</strong>
-            <p>
-              Utilizamos técnicas cognitivas e vivenciais para trabalhar experiências que ainda despertam sofrimento e modificar a forma como elas influenciam o presente.
-            </p>
-          </div>
-
-          <div class="abordagem-passo">
-            <strong>3. Cuidado com as Suas Necessidades</strong>
-            <p>
-              Trabalhamos para que você consiga reconhecer suas necessidades emocionais e aprender formas mais adequadas de atendê-las.
-            </p>
-          </div>
-
-          <div class="abordagem-passo">
-            <strong>4. Mudança Prática</strong>
-            <p>
-              Desenvolvemos novas maneiras de responder às situações em que seus esquemas são ativados, reduzindo reações automáticas como autocrítica, evitação ou necessidade excessiva de controle.
-            </p>
-          </div>
-
+      <div class="abordagem-passos-grid">
+        <div class="abordagem-passo-card">
+          <strong>Mapeamento e Autoconhecimento</strong>
+          <p>
+            Identificamos quais esquemas e gatilhos estão sendo ativados na sua rotina ou no seu desejo de ser mãe, buscando compreender de onde eles vêm.
+          </p>
         </div>
-      </article>
 
-      <article class="abordagem-card-grande abordagem-card-objetivo">
+        <div class="abordagem-passo-card">
+          <strong>Reestruturação Cognitiva e Emocional</strong>
+          <p>
+            Utilizamos técnicas cognitivas e vivenciais para trabalhar experiências que ainda despertam sofrimento e modificar a forma como elas influenciam o presente.
+          </p>
+        </div>
+
+        <div class="abordagem-passo-card">
+          <strong>Cuidado com as Suas Necessidades</strong>
+          <p>
+            Trabalhamos para que você consiga reconhecer suas necessidades emocionais e aprender formas mais adequadas de atendê-las.
+          </p>
+        </div>
+
+        <div class="abordagem-passo-card">
+          <strong>Mudança Prática</strong>
+          <p>
+            Desenvolvemos novas maneiras de responder às situações em que seus esquemas são ativados, reduzindo reações automáticas como autocrítica, evitação ou necessidade excessiva de controle.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="abordagem-objetivo-destaque">
+      <div>
+        <span class="section-tag">Direção do processo</span>
         <h3>O objetivo do tratamento</h3>
+      </div>
 
+      <div>
         <p>
           O objetivo do tratamento é fortalecer o <strong>modo Adulto Saudável</strong>.
         </p>
@@ -2182,8 +2399,7 @@ section{
         <p>
           Na Terapia do Esquema, ele representa a parte de nós capaz de reconhecer as próprias necessidades, acolher a vulnerabilidade e tomar decisões de forma mais consciente. Com esse fortalecimento, você aprende a estabelecer limites, cuidar de si e responder às situações com mais equilíbrio, reduzindo a influência dos esquemas na sua vida.
         </p>
-      </article>
-
+      </div>
     </div>
 
   </div>
@@ -2206,7 +2422,7 @@ section{
         Já se você tem mais facilidade para falar sobre si, minha postura é mais passiva, e eu vou permitir que você fale sobre aquilo que considera importante. Em alguns momentos, farei perguntas pontuais para conhecer melhor sua história e compreender algumas situações, mas você terá espaço para falar sobre o que quiser, sem julgamentos.
       </p>
 
-      <p>
+      <p class="primeira-destaque">
         O importante é que você se sinta acolhida e saiba que só precisa falar sobre aquilo que se sente confortável para compartilhar nesse primeiro momento.
       </p>
 
@@ -2229,11 +2445,11 @@ section{
     <span class="section-tag">Atendimento</span>
 
     <p class="section-intro atendimento-intro">
-      Cada atendimento é realizado de forma personalizada, de acordo com as
-      necessidades de cada paciente, sempre mantendo a ética e o sigilo profissional.
+      Cada atendimento é realizado de forma personalizada, de acordo com as necessidades de cada paciente, sempre mantendo a ética e o sigilo profissional.
     </p>
 
-    <div class="atendimento-grid atendimento-grid-tres">
+    <div class="atendimento-grid atendimento-grid-quatro">
+
       <div class="atendimento-item">
         <strong>Online</strong>
         <span>Atendimento por videochamada.</span>
@@ -2241,14 +2457,24 @@ section{
 
       <div class="atendimento-item">
         <strong>Semanal</strong>
-        <span>Encontros semanais com duração aproximada de 50 minutos.</span>
+        <span>Encontros realizados semanalmente.</span>
+      </div>
+
+      <div class="atendimento-item">
+        <strong>50 minutos</strong>
+        <span>Duração aproximada de cada sessão.</span>
       </div>
 
       <div class="atendimento-item">
         <strong>Particular</strong>
-        <span>Atendimento particular para mulheres adultas.</span>
+        <span>Atendimento particular com emissão de recibo.*</span>
       </div>
+
     </div>
+
+    <p class="atendimento-observacao">
+      * O recibo emitido pode ser utilizado para solicitar reembolso junto ao seu plano de saúde, conforme as regras de reembolso da operadora.
+    </p>
 
   </div>
 </section>
